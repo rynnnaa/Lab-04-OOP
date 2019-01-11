@@ -2,14 +2,21 @@
 
 Developer: Ryna Truong
 
-Contributions and References: Andrw Hinojosa
+Contributions and References:
 
-Actual Time to complete: 6 Hours
+Actual Time to complete: 
 
-User must create a new project in Visual Studio. User must push project to Github. User must create a README.md (after pushing project to Github. User must create code that resembles ATM features. Those features are deposit, withdraw, view balance, and exit. User must use exception handling by implementing try/catch/finally and a throw in the program. User must use Unit Testing for every method. Purpose of the program to create an ATM using C# languange's Main method, external methods, and at least one try/catch/finally implementation.
+Provide a readme that includes clear directions on setting up this program.
+
+Questions to Consider:
+What is the purpose of the program?
+How do I run the program?
+What does the program look like? (visual)
+
+User must clone course repositorty. User must create a new repo and copy starter code into repo. User create a Program using the starter code classes given. User must work with object oriented programming, classes, objects, and constructors. User must push project to Github. User must create a README.md (after pushing project to Github.
+
+Purpose of Program: Program initiates a game with user to play tic tac toe
 
 To Run the program, user must click the start button (Green arrow) in Visual Studio.
 
-Here is a visual of what the program looks like.
-
-Successful Output
+Here is a visual of what the program looks like:
