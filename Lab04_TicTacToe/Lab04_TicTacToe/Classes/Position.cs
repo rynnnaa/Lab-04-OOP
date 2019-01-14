@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-public namespace Lab04_TicTacToe.Classes
+ namespace Lab04_TicTacToe.Classes
 {
-    class Position
+    public class Position
     {
 		public int Row { get; set; }
 		public int Column { get; set; }
