@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab04_TicTacToe.Classes
+public namespace Lab04_TicTacToe.Classes
 {
     class Position
     {

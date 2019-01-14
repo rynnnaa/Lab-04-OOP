@@ -7,7 +7,7 @@ namespace Lab04_TicTacToe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Let's play a game");
             Board newBoard = new Board();
             newBoard.DisplayBoard();
         }
