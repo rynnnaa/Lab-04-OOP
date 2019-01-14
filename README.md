@@ -2,7 +2,7 @@
 
 Developer: Ryna Truong
 
-Contributions and References:
+Contributions and References: Deziree Teugue
 
 Actual Time to complete: 
 
