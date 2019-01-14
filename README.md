@@ -4,7 +4,7 @@ Developer: Ryna Truong
 
 Contributions and References: Deziree Teugue
 
-Actual Time to complete: 
+Actual Time to complete: In process
 
 Provide a readme that includes clear directions on setting up this program.
 
