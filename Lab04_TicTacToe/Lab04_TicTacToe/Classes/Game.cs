@@ -4,34 +4,35 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
-	{
-		public Player PlayerOne { get; set; }
-		public Player PlayerTwo { get; set; }
-		public Player Winner { get; set; }
-		public Board Board { get; set; }
+    class Game
+    {
+        public Player PlayerOne { get; set; }
+        public Player PlayerTwo { get; set; }
+        public Player Winner { get; set; }
+        public Board Board { get; set; }
 
 
-		/// <summary>
-		/// Require 2 players and a board to start a game. 
-		/// </summary>
-		/// <param name="p1">Player 1</param>
-		/// <param name="p2">Player 2</param>
-		public Game(Player p1, Player p2)
-		{
-			PlayerOne = p1;
-			PlayerTwo = p2;
-			Board = new Board();
-		}
+        /// <summary>
+        /// Require 2 players and a board to start a game. 
+        /// </summary>
+        /// <param name="p1">Player 1</param>
+        /// <param name="p2">Player 2</param>
+        public Game(Player p1, Player p2)
+        {
+            PlayerOne = p1;
+            PlayerTwo = p2;
+            Board = new Board();
+        }
 
-		/// <summary>
-		/// Activate the Play of the game
-		/// </summary>
-		/// <returns>Winner</returns>
-		public Player Play()
-		{
+        /// <summary>
+        /// Activate the Play of the game
+        /// </summary>
+        /// <returns>Winner</returns>
+        public Player Play()
+        {
 
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
+
+            //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
@@ -47,7 +48,34 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-		}
+            int counter = 0;
+
+            while (Winner == null)
+            {
+                Board.DisplayBoard();
+                NextPlayer().TakeTurn(Board);
+
+                if (CheckForWinner(Board))
+                {
+                    Winner = NextPlayer();
+                }
+                else
+                {
+                    counter++;
+                    SwitchPlayer();
+                    Console.Clear();
+                }
+                if counter == 9 && Winner == null)
+                {
+                    Console.Clear();
+                    Console.WriteLine("It is a draw");
+                }
+            }
+            Console.Clear();
+            Console.WriteLine("YAY! You won!");
+            return Winner;
+        }
+    }
 
 
 		/// <summary>
@@ -82,13 +110,21 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
+
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
 			
 			}
+        if (a == b && b == c && a == c)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
-			return false;
-		}
+    }
 
 
 		/// <summary>
