@@ -4,34 +4,59 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
-	{
-		public Player PlayerOne { get; set; }
-		public Player PlayerTwo { get; set; }
-		public Player Winner { get; set; }
-		public Board Board { get; set; }
+    class Game
+    {
+        public Player PlayerOne { get; set; }
+        public Player PlayerTwo { get; set; }
+        public Player Winner { get; set; }
+        public Board Board { get; set; }
 
 
-		/// <summary>
-		/// Require 2 players and a board to start a game. 
-		/// </summary>
-		/// <param name="p1">Player 1</param>
-		/// <param name="p2">Player 2</param>
-		public Game(Player p1, Player p2)
-		{
-			PlayerOne = p1;
-			PlayerTwo = p2;
-			Board = new Board();
-		}
+        /// <summary>
+        /// Require 2 players and a board to start a game. 
+        /// </summary>
+        /// <param name="p1">Player 1</param>
+        /// <param name="p2">Player 2</param>
+        public Game(Player p1, Player p2)
+        {
+            PlayerOne = p1;
+            PlayerTwo = p2;
+            Board = new Board();
+        }
 
-		/// <summary>
-		/// Activate the Play of the game
-		/// </summary>
-		/// <returns>Winner</returns>
-		public Player Play()
-		{
-            PlayerOne.Marker = "X";
-            PlayerOne.IsTurn = true;
+        /// <summary>
+        /// Activate the Play of the game
+        /// </summary>
+        /// <returns>Winner</returns>
+        public Player Play()
+        {
+            int counter = 0;
+
+            while (Winner == null)
+            {
+                Board.DisplayBoard();
+                NextPlayer().TakeTurn(Board);
+
+                if (CheckForWinner(Board))
+                {
+                    Winner = NextPlayer();
+                }
+                else
+                {
+                    counter++;
+                    SwitchPlayer();
+                    Console.Clear();
+                }
+                if counter == 9 && Winner == null)
+                {
+                    Console.Clear();
+                    Console.WriteLine("It is a draw");
+                }
+            }
+            Console.Clear();
+            Console.WriteLine("YAY! You won!");
+            return Winner;
+        }
 
 
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
