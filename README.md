@@ -14,6 +14,6 @@ To Run the program, user must click the start button (Green arrow) in Visual Stu
 
 Here is a visual of what the program looks like: 
 
-[SetUp](https://github.com/rynnnaa/Lab-04-OOP/blob/master/SetUp.PNG)
+![SetUp](https://github.com/rynnnaa/Lab-04-OOP/blob/master/SetUp.PNG)
 
-[Winner](https://github.com/rynnnaa/Lab-04-OOP/blob/master/winner.PNG)
+![Winner](https://github.com/rynnnaa/Lab-04-OOP/blob/master/winner.PNG)
