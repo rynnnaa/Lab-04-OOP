@@ -3,25 +3,28 @@ using System;
 
 namespace Lab04_TicTacToe
 {
-    public class Program
+    namespace Lab04_TicTacToe
     {
-        static void Main(string[] args)
+        public class Program
         {
-            Console.WriteLine("Let's play a game");
-
-            Player p1 = new Player();
-            Player p2 = new Player();
-
-            p1.Marker = "O";
-            p2.Marker = "X";
-
-
-            Board newBoard = new Board();
-            newBoard.DisplayBoard();
-
-            Game game = new Game(p1, p2);
-            game.Play();
+            /// <summary>
+            /// Creates instances of game and plaer classes and runs the game
+            /// </summary>
+            /// <param name="args"></param>
+            private static void Main(string[] args)
+            {
+                Player playerOne = new Player();
+                Player playerTwo = new Player();
+                Console.WriteLine("Player One what is your name?");
+                playerOne.Name = Console.ReadLine();
+                playerOne.Marker = "X";
+                Console.WriteLine("player two what is your name?");
+                playerTwo.Name = Console.ReadLine();
+                playerTwo.Marker = "O";
+                Game newGame = new Game(playerOne, playerTwo);
+                newGame.Play();
+                Console.ReadLine();
+            }
         }
-
     }
 }
